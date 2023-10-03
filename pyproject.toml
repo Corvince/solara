@@ -5,13 +5,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "solara"
-authors = [{name = "Maarten A. Breddels", email = "maartenbreddels@gmail.com"}]
-license = {file = "LICENSE"}
+authors = [
+    { name = "Maarten A. Breddels", email = "maartenbreddels@gmail.com" },
+]
+license = { file = "LICENSE" }
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
-packages = [
-    { include = "solara" }
-]
+packages = [{ include = "solara" }]
 dependencies = [
     "reacton>=1.7.1",
     "ipywidgets",
@@ -27,13 +27,9 @@ dependencies = [
     "click>=7.1.0",
     "rich_click",
     "uvicorn",
-    "websockets",
     "starlette",
-    "jupyter_client>=7.0.0",
-    "watchdog",
     "requests",
     "nbformat",
-    "ipykernel",
 ]
 
 [tool.hatch.build.targets.wheel.shared-data]
@@ -81,13 +77,8 @@ dev = [
     "playwright; python_version > '3.6'",
     "pytest-playwright; python_version > '3.6'",
 ]
-assets = [
-    "solara-assets==1.19.0"
-]
-flask = [
-    "flask",
-    "flask-sock",
-]
+assets = ["solara-assets==1.19.0"]
+flask = ["flask", "flask-sock"]
 documentation = [
     "numpy",
     "bqplot",
@@ -135,4 +126,4 @@ timeout = 180
 
 
 [tool.codespell]
-skip='equis-in-vidi.md,substiterat-vati.md,.*,solara/website/build,*.svg,highlight-dark.css,packages/**/dist/*,node_modules,packages/assets,package*.json,tsconfig.tsbuildinfo'
+skip = 'equis-in-vidi.md,substiterat-vati.md,.*,solara/website/build,*.svg,highlight-dark.css,packages/**/dist/*,node_modules,packages/assets,package*.json,tsconfig.tsbuildinfo'
